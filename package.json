@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "html-pdf-node": "^1.0.8"
+    "express": "^4.19.2",
+    "html-pdf-node": "^1.0.8",
+    "node-schedule": "^2.1.1"
   }
 }

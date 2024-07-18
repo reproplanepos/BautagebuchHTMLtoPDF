@@ -1,0 +1,385 @@
+<style>
+   body { background-color: whitesmoke; }
+   #header { font-family: arial; background-color: grey; color: white; width: 100%; height: 30px; padding-top: 20px; padding-left: 10px; font-size: 18px; border-left: 1px solid silver; z-index: 1; }
+   #btInfoDiv { background-color: lightgoldenrodyellow; width: 99%; left: 0px; padding: 6px 8px 8px 13px; }
+   #btInfoTable { font-weight: bold; width: 99.6%; margin-top: 1px; }
+   .tdBtInfo { font-size: 14px; background-color: whitesmoke; height: 35px; border: 1px solid silver; }
+   #btContentGes { margin-top: 115px; margin-left: 5px; font-family: arial; width: 85%; }
+   #inputDatum { border: 1px solid lightgray; }
+   .contentDiv { border: 1px solid black; background-color: white; margin-bottom: 15px; }
+   .contentDivLabel { background-color: linen; height: 20px; margin-top: 0px; margin-bottom: 0px; padding: 5px; color: black; }
+   .contentDivValues { padding: 10px; background-color: rgb(160, 175, 189); border-top: 1px solid black; }
+   #btInputAll { position: absolute; background-color: ghostwhite; min-width: 630px; border: 1px solid black; padding: 10px; z-index: 10; font-family: arial; left: 25%; }
+   table { font-family: arial, sans-serif; border-collapse: collapse; width: 100%; }
+   td, th { border: 3px solid rgb(160, 175, 189); text-align: left; padding: 3px 3px 3px 10px; font-size: 11px; height: 26px; }
+   th { background-color: rgb(227, 239, 255); font-family: arial; font-weight: bold; font-size: 9pt; }
+   tr { background-color: rgb(247, 245, 245); }
+   tr:nth-child(2n+1) { background-color: rgb(236, 236, 236); }
+   .delTh { background-color: rgb(234, 244, 255); border: medium; }
+   .tdAllgLabel { width: 200px; font-weight: bold; font-family: arial; font-size: 9pt; }
+   #btInputHeadline { font-weight: bold; }
+   .wdInput { border: 1px solid lightgray; font-family: arial; width: 97%; }
+   .notesField { border: 1px solid lightgray; font-family: arial; margin-left: -2px; font-size: 10pt; width: 50%; }
+   .inputValues { border: 1px solid lightgray; font-family: arial; }
+   .tdInputLabel { font-weight: bold; }
+   #spanBtNr { color: lightslategray; }
+   #tdDate { width: 105px; text-align: center; padding-right: 10px; }
+   .textareaTdInput { height: 18px; max-width: 900px; }
+   .dateTdInput { width: 130px; }
+   label { font-family: arial; font-size: 10pt; }
+   .spanLabel { padding-left: 20px; }
+</style>
+<body>
+   <div id="header">Bautagebuch</div>
+   <div id="btInfoDiv">
+      <table id="btInfoTable">
+         <tbody>
+            <tr>
+               <td id="tdDate" class="tdBtInfo">15.07.2024</td>
+               <td class="tdBtInfo">
+                   <span>Tagesbericht Nr.</span>
+                   <span id="spanBtNr">02 äöüÄÖÜß</span>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+   <div id="btContentGes">
+      <div id="contentAllg" class="contentDiv">
+         <p id="contentLabelAllg" class="contentDivLabel">
+            <span class="spanLabel">Allgemein</span>
+         </p>
+         <div id="contentValuesAllg" class="contentDivValues">
+            <table id="contentTableAllg" class="contentTable">
+               <tbody>
+                  <tr>
+                     <td class="tdAllgLabel">Projekt:</td>
+                     <td>Segelfliegerdamm</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Baustellenanschrift:</td>
+                     <td>Segelfliegerdamm 1-80, 12487 Berlin</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Auftraggeber:</td>
+                     <td>BoRR GmbH</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Bauleitung:</td>
+                     <td>Bernd Bauleiter</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Polier:</td>
+                     <td>Paul Polier</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Erstellt Am:</td>
+                     <td>15.07.2024 11:07:33</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Ersteller (Firma):</td>
+                     <td>reproplan berlin oHG</td>
+                  </tr>
+                  <tr>
+                     <td class="tdAllgLabel">Ersteller (Person):</td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div id="contentWetter" class="contentDiv">
+         <p id="contentLabelWetter" class="contentDivLabel">
+            <span class="spanLabel">Wetter</span>
+         </p>
+         <div id="contentValuesWetter" class="contentDivValues">
+            <table id="contentTableWetter" class="contentTable">
+               <tr class="trLabels">
+                  <th>
+                     Temperatur (min.):
+                  </th>
+                  <th>
+                     Temperatur (max.):
+                  </th>
+                  <th>
+                     Luftfeuchte:
+                  </th>
+                  <th>
+                     Wind:
+                  </th>
+                  <th>
+                     Niederschlag:
+                  </th>
+                  <th>
+                     Bedingung:
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     15 �C
+                  </td>
+                  <td>
+                     23 �C
+                  </td>
+                  <td>
+                     81.54 %
+                  </td>
+                  <td>
+                     7.6 km/h
+                  </td>
+                  <td>
+                     0 l/mm�
+                  </td>
+                  <td>
+                     Klar
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="contentPersonaleinsatz" class="contentDiv">
+         <p id="contentLabelPersonaleinsatz" class="contentDivLabel">
+            <span class="spanLabel">Personaleinsatz</span>
+         </p>
+         <div id="contentValuesPersonaleinsatz" class="contentDivValues">
+            <table id="contentTablePersonaleinsatz" class="contentTable">
+               <tr class="trLabels">
+                  <th>
+                     Firma:
+                  </th>
+                  <th>
+                     Arbeitszeit (von):
+                  </th>
+                  <th>
+                     Arbeitszeit (bis):
+                  </th>
+                  <th>
+                     Anzahl Besch�ftigte:
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     Testfirma ABC
+                  </td>
+                  <td>
+                     08:00
+                  </td>
+                  <td>
+                     16:30
+                  </td>
+                  <td>
+                     2
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Nachunternehmer DEF
+                  </td>
+                  <td>
+                     09:30
+                  </td>
+                  <td>
+                     18:00
+                  </td>
+                  <td>
+                     3
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="contentGer�te-Einsatz" class="contentDiv">
+         <p id="contentLabelGer�te-Einsatz" class="contentDivLabel">
+            <span class="spanLabel">Ger�te-Einsatz</span>
+         </p>
+         <div id="contentValuesGer�te-Einsatz" class="contentDivValues">
+            <table id="contentTableGer�te-Einsatz" class="contentTable">
+               <tr class="trLabels">
+                  <th>
+                     Bezeichnung:
+                  </th>
+                  <th>
+                     Menge:
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     LKW
+                  </td>
+                  <td>
+                     2
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     PKW
+                  </td>
+                  <td>
+                     1
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Kran
+                  </td>
+                  <td>
+                     1
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Bagger
+                  </td>
+                  <td>
+                     2
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="contentMaterial" class="contentDiv">
+         <p id="contentLabelMaterial" class="contentDivLabel">
+            <span class="spanLabel">Material</span>
+         </p>
+         <div id="contentValuesMaterial" class="contentDivValues">
+            <table id="contentTableMaterial" class="contentTable">
+               <tr class="trLabels">
+                  <th>
+                     Bezeichnung:
+                  </th>
+                  <th>
+                     Menge:
+                  </th>
+                  <th>
+                     Einheit:
+                  </th>
+                  <th>
+                     Lieferant:
+                  </th>
+                  <th>
+                     LieferscheinNR:
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     Beton
+                  </td>
+                  <td>
+                     3
+                  </td>
+                  <td>
+                     m�
+                  </td>
+                  <td>
+                     UPS
+                  </td>
+                  <td>
+                     123 456 789-001
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Stahl
+                  </td>
+                  <td>
+                     1
+                  </td>
+                  <td>
+                     t
+                  </td>
+                  <td>
+                     UPS
+                  </td>
+                  <td>
+                     123 456 789-002
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="contentAusgef�hrteT�tigkeiten" class="contentDiv">
+         <p id="contentLabelAusgef�hrteT�tigkeiten" class="contentDivLabel">
+            <span class="spanLabel">Ausgef�hrte T�tigkeiten</span>
+         </p>
+         <div id="contentValuesAusgef�hrteT�tigkeiten" class="contentDivValues">
+            <table id="contentTableAusgef�hrteT�tigkeiten" class="contentTable">
+               <tr class="trLabels">
+                  <th>
+                     Datum:
+                  </th>
+                  <th>
+                     Beschreibung:
+                  </th>
+                  <th>
+                     Bewertung:
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     01.07.2024
+                  </td>
+                  <td>
+                     Ich mach hier und da, dies und das
+                  </td>
+                  <td>
+                     Eins; Zwei; Drei
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     01.07.2024
+                  </td>
+                  <td>
+                     Baustelle einrichten
+                  </td>
+                  <td>
+                     Drei; Vier; F�nf
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="contentBesondereVorkommnisse" class="contentDiv">
+         <p id="contentLabelBesondereVorkommnisse" class="contentDivLabel">
+            <span class="spanLabel">Besondere Vorkommnisse</span>
+         </p>
+         <div id="contentValuesBesondereVorkommnisse" class="contentDivValues">
+            <table id="contentTableBesondereVorkommnisse" class="contentTable">
+               <tr class="trLabels">
+                  <th>
+                     Kategorie:
+                  </th>
+                  <th>
+                     Beschreibung:
+                  </th>
+                  <th>
+                     Bedingungen:
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     Behinderung
+                  </td>
+                  <td>
+                     Parkplatz zugestellt
+                  </td>
+                  <td>
+                     schlecht
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     Personalausfall
+                  </td>
+                  <td>
+                     Hoher krankenstand
+                  </td>
+                  <td>
+                     sehr schlecht
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </div>
+</body>
